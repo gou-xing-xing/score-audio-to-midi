@@ -1,0 +1,4 @@
+interface:
+  display_name: "琴谱与音频复原 MIDI"
+  short_description: "结合琴谱与录音复原钢琴 MIDI，逐小节核对音符、节奏、松键与独立踏板"
+  default_prompt: "请使用 $score-audio-to-midi，结合指定目录中的琴谱和演奏音频复原 MIDI，并完成全曲漏音、时值、踏板和试听检查。"
