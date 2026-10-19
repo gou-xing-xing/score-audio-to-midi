@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "title": "Piano reconstruction",
+  "origin_seconds": 0.2,
+  "ticks_per_beat": 1920,
+  "tempo_map": [
+    {
+      "beat": 0,
+      "us_per_beat": 500000
+    }
+  ],
+  "meters": [
+    {
+      "beat": 0,
+      "numerator": 4,
+      "denominator": 4
+    }
+  ],
+  "key_signatures": [
+    {
+      "beat": 0,
+      "key": "C"
+    }
+  ],
+  "channels": [
+    {
+      "channel": 0,
+      "name": "Piano RH",
+      "program": 0
+    },
+    {
+      "channel": 1,
+      "name": "Piano LH",
+      "program": 0
+    }
+  ],
+  "bars": [
+    {
+      "id": "1",
+      "beat": 0
+    },
+    {
+      "id": "2",
+      "beat": 4
+    }
+  ],
+  "reviewed_bars": [
+    "1",
+    "2"
+  ],
+  "score_heads": [
+    {
+      "id": "h1",
+      "page": 1,
+      "bar": "1",
+      "pitch": 60,
+      "channel": 0
+    },
+    {
+      "id": "h2",
+      "page": 1,
+      "bar": "1",
+      "pitch": 60,
+      "channel": 0
+    },
+    {
+      "id": "h3",
+      "page": 1,
+      "bar": "1",
+      "pitch": 48,
+      "channel": 1
+    }
+  ],
+  "notes": [
+    {
+      "id": "n1",
+      "channel": 0,
+      "pitch": 60,
+      "velocity": 70,
+      "onset_seconds": 0.2,
+      "key_release_seconds": 1.18,
+      "source": "score",
+      "source_heads": [
+        "h1",
+        "h2"
+      ],
+      "source_relation": "tie"
+    },
+    {
+      "id": "n2",
+      "channel": 1,
+      "pitch": 48,
+      "velocity": 60,
+      "onset_seconds": 0.2,
+      "key_release_seconds": 0.68,
+      "source": "score",
+      "source_heads": [
+        "h3"
+      ]
+    }
+  ],
+  "pedal_expected": true,
+  "pedal": [
+    {
+      "time_seconds": 0.3,
+      "value": 127
+    },
+    {
+      "time_seconds": 1.5,
+      "value": 0
+    }
+  ],
+  "omitted_heads": [],
+  "end_audio_seconds": 3.0
+}

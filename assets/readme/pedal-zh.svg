@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="490" viewBox="0 0 1200 490" role="img" aria-labelledby="title desc">
+<title id="title">松键与抬踏分别记录</title>
+<desc id="desc">两音可运行示例。C4 在 0.98 秒松键，C3 在 0.48 秒松键。CC64 在 0.10 秒踩下、1.30 秒抬起。所有时间相对导出 MIDI 起点。</desc>
+<rect width="1200" height="490" rx="20" fill="#F6F4ED"/>
+<!-- Source: examples/pedal-demo.json, verified by export and MIDI readback. -->
+<text x="56" y="55" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="32" font-weight="600" fill="#202C31" text-anchor="start">松键与抬踏，分别记录。</text>
+<rect x="56" y="82" width="28" height="12" rx="3" fill="#38645B"/>
+<text x="96" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="22" font-weight="400" fill="#68736D" text-anchor="start">琴键按下</text>
+<line x1="280" y1="88" x2="320" y2="88" stroke="#B96C4B" stroke-width="5" stroke-dasharray="7 5"/>
+<text x="332" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="22" font-weight="400" fill="#68736D" text-anchor="start">松键后仍踩着踏板</text>
+<line x1="240" y1="152" x2="240" y2="397" stroke="#D6DBD0" stroke-width="1.5" />
+<text x="240" y="139" font-family="ui-monospace, 'Cascadia Mono', Consolas, monospace" font-size="20" font-weight="400" fill="#68736D" text-anchor="middle">0.0 s</text>
+<line x1="520" y1="152" x2="520" y2="397" stroke="#D6DBD0" stroke-width="1.5" />
+<text x="520" y="139" font-family="ui-monospace, 'Cascadia Mono', Consolas, monospace" font-size="20" font-weight="400" fill="#68736D" text-anchor="middle">0.5 s</text>
+<line x1="800" y1="152" x2="800" y2="397" stroke="#D6DBD0" stroke-width="1.5" />
+<text x="800" y="139" font-family="ui-monospace, 'Cascadia Mono', Consolas, monospace" font-size="20" font-weight="400" fill="#68736D" text-anchor="middle">1.0 s</text>
+<line x1="1080" y1="152" x2="1080" y2="397" stroke="#D6DBD0" stroke-width="1.5" />
+<text x="1080" y="139" font-family="ui-monospace, 'Cascadia Mono', Consolas, monospace" font-size="20" font-weight="400" fill="#68736D" text-anchor="middle">1.5 s</text>
+<line x1="968" y1="153" x2="968" y2="398" stroke="#B96C4B" stroke-width="1.5" stroke-dasharray="5 6"/>
+<text x="56" y="209" font-family="ui-monospace, 'Cascadia Mono', Consolas, monospace" font-size="23" font-weight="500" fill="#202C31" text-anchor="start">C4 · ch 0</text>
+<line x1="240" y1="217" x2="1080" y2="217" stroke="#D6DBD0" stroke-width="1.5" />
+<rect x="240.00" y="187" width="548.77" height="28" rx="5" fill="#38645B"/>
+<line x1="788.771" y1="201" x2="968" y2="201" stroke="#B96C4B" stroke-width="6" stroke-dasharray="8 6"/>
+<circle cx="788.77" cy="201" r="5" fill="#F6F4ED" stroke="#38645B" stroke-width="2"/>
+<text x="788.771" y="177" font-family="ui-monospace, 'Cascadia Mono', Consolas, monospace" font-size="20" font-weight="400" fill="#38645B" text-anchor="middle">0.98 s</text>
+<text x="56" y="289" font-family="ui-monospace, 'Cascadia Mono', Consolas, monospace" font-size="23" font-weight="500" fill="#202C31" text-anchor="start">C3 · ch 1</text>
+<line x1="240" y1="297" x2="1080" y2="297" stroke="#D6DBD0" stroke-width="1.5" />
+<rect x="240.00" y="267" width="268.77" height="28" rx="5" fill="#38645B"/>
+<line x1="508.771" y1="281" x2="968" y2="281" stroke="#B96C4B" stroke-width="6" stroke-dasharray="8 6"/>
+<circle cx="508.77" cy="281" r="5" fill="#F6F4ED" stroke="#38645B" stroke-width="2"/>
+<text x="508.771" y="257" font-family="ui-monospace, 'Cascadia Mono', Consolas, monospace" font-size="20" font-weight="400" fill="#38645B" text-anchor="middle">0.48 s</text>
+<text x="56" y="356" font-family="ui-monospace, 'Cascadia Mono', Consolas, monospace" font-size="23" font-weight="600" fill="#B96C4B" text-anchor="start">CC64</text>
+<text x="56" y="383" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="20" font-weight="400" fill="#68736D" text-anchor="start">双通道</text>
+<text x="218" y="349" font-family="ui-monospace, 'Cascadia Mono', Consolas, monospace" font-size="18" font-weight="400" fill="#68736D" text-anchor="end">127</text>
+<text x="218" y="393" font-family="ui-monospace, 'Cascadia Mono', Consolas, monospace" font-size="18" font-weight="400" fill="#68736D" text-anchor="end">0</text>
+<rect x="296.00" y="342" width="672.00" height="44" fill="#B96C4B" opacity="0.09"/>
+<path d="M 240 386 H 296.00 V 342 H 968.00 V 386 H 1080" fill="none" stroke="#B96C4B" stroke-width="3.5"/>
+<text x="296" y="423" font-family="ui-monospace, 'Cascadia Mono', Consolas, monospace" font-size="20" font-weight="400" fill="#B96C4B" text-anchor="middle">0.10 s</text>
+<text x="968" y="423" font-family="ui-monospace, 'Cascadia Mono', Consolas, monospace" font-size="20" font-weight="400" fill="#B96C4B" text-anchor="middle">1.30 s</text>
+<text x="56" y="466" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="22" font-weight="400" fill="#68736D" text-anchor="start">示例 MIDI 相对时间；抬踏后的声音衰减未绘出。</text>
+</svg>
