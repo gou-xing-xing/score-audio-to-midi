@@ -1,6 +1,6 @@
 # score-audio-to-midi
 
-[简体中文](README.md) · **English**
+[简体中文](README.md) · **English** · [MIT license](LICENSE)
 
 <p align="center">
   <img src="assets/readme/hero-en.svg" width="100%" alt="Reconstruct piano MIDI from a score and performance audio, with bar-by-bar review, separate sustain pedal events, and a preview rendered from the final MIDI.">
@@ -38,7 +38,7 @@ Clone the repository into your personal skills directory (works in PowerShell or
 git clone https://github.com/gou-xing-xing/score-audio-to-midi.git "$HOME/.agents/skills/score-audio-to-midi"
 ```
 
-Cloning a private repository requires access and GitHub authentication. If the destination already exists, inspect your current installation first. Open a new Codex session after installation.
+If the destination already exists, inspect your current installation first. Open a new Codex session after installation.
 
 ### 2. Prepare the inputs and invoke it
 
@@ -55,7 +55,7 @@ Reconstruct MIDI from the score and performance audio in this directory. Review 
 | Performance | A matching piano recording in a format FFmpeg can decode |
 | Preview instrument | A local piano SF2; confirm its actual bank / preset. No SoundFont is included |
 
-The scripts require **Python 3.11+**, with dependencies installed as needed. The workflow checks input pairing and completeness, creates a separate working directory, and preserves the originals. It prefers local processing and does not require uploading scores or recordings.
+The scripts require **Python 3.11+**, with dependencies installed as needed. The current validation environment is Windows with Python 3.12; the complete workflow has not been validated on macOS / Linux. The workflow checks input pairing and completeness, creates a separate working directory, and preserves the originals.
 
 ### 3. Optional: run the two-note example
 
@@ -122,6 +122,14 @@ The defaults are `--bank 0 --preset 0`; verify that they select a piano in your 
 - **Preview rendering is a sampled approximation.** The adapter does not fully model sympathetic resonance, repedaling, or half-pedaling. The chosen SF2 determines the timbre.
 - **No models, weights, or SF2 files are bundled or automatically downloaded.** Select tools only when needed and check their licenses and runtime compatibility.
 
+## Privacy and issue reports
+
+The bundled scripts process files locally and contain no network upload logic. This does not mean the entire agent environment runs offline; data handling by an agent or external model depends on the actual environment and services used.
+
+Input manifests (`input_manifest.json`), validation reports (`*.validation.json`), and render reports (`*.render.json`) may contain absolute local paths, private filenames, and file hashes. Remove or replace personal information before sharing them publicly. Keep working material and outputs outside the repository; `.gitignore` also excludes common work directories, media, SoundFonts, weights, and credential files by default.
+
+Report problems through [GitHub Issues](https://github.com/gou-xing-xing/score-audio-to-midi/issues). Include your OS, Python and relevant dependency versions, minimal reproduction steps, and error messages. For playback issues, also provide the SoundFont name, bank / preset, and pedal mode. Attach only a minimal, sanitized example you have permission to share; do not submit private scores, recordings, credentials, or SoundFont files.
+
 ## Further reading
 
 | Document | Contents |
@@ -131,4 +139,8 @@ The defaults are `--bank 0 --preset 0`; verify that they select a piano in your 
 | [Project format and scripts](references/project-format.md) | JSON, commands, coverage rules, and revision baselines |
 | [Quality checks and preview rendering](references/quality-and-rendering.md) | CC64, playback, endings, and revision checks |
 
-These detailed references are currently in Chinese. The repository does not yet include a license; third-party tools, models, and SoundFonts retain their own licenses.
+These detailed references are currently in Chinese.
+
+## License
+
+The repository's code, skill instructions, original examples, and diagrams are released under the [MIT license](LICENSE), allowing use, modification, distribution, and commercial use with the copyright and license notices retained. Input scores and recordings, as well as third-party tools, models, weights, and SoundFonts, remain subject to their respective licenses; this repository's MIT license grants no additional rights to them.

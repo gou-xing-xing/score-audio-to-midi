@@ -1,2 +1,47 @@
 __pycache__/
 *.py[cod]
+
+# Local environments, private work material, and generated reports
+.venv/
+venv/
+vendor/
+work/
+output/
+outputs/
+evidence/
+input_manifest.json
+*.validation.json
+*.render.json
+*.coverage.tsv
+
+# Credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Keep user scores, recordings, previews, SoundFonts, and weights outside the skill.
+# Deliberately reviewed, redistributable examples can be explicitly added.
+*.pdf
+*.musicxml
+*.mxl
+*.mid
+*.midi
+*.wav
+*.mp3
+*.m4a
+*.flac
+*.aif
+*.aiff
+*.ogg
+*.opus
+*.sf2
+*.sf3
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx

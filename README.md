@@ -1,6 +1,6 @@
 # score-audio-to-midi
 
-**简体中文** · [English](README.en.md)
+**简体中文** · [English](README.en.md) · [MIT 许可证](LICENSE)
 
 <p align="center">
   <img src="assets/readme/hero-zh.svg" width="100%" alt="琴谱与演奏音频复原 MIDI：逐小节核对，独立延音踏板，从最终 MIDI 生成试听。">
@@ -38,7 +38,7 @@
 git clone https://github.com/gou-xing-xing/score-audio-to-midi.git "$HOME/.agents/skills/score-audio-to-midi"
 ```
 
-克隆私有仓库需要访问权限和 GitHub 认证。若目录已经存在，请先检查现有安装。安装后打开新的 Codex 会话。
+若目标目录已经存在，请先检查现有安装。安装后打开新的 Codex 会话。
 
 ### 2. 准备输入并调用
 
@@ -55,7 +55,7 @@ $score-audio-to-midi D:/Music/My Piece/
 | 演奏 | 与琴谱对应的钢琴录音，使用 FFmpeg 可解码的格式 |
 | 试听音源 | 本地钢琴 SF2；确认实际 bank / preset，技能不附带音源 |
 
-运行脚本需要 **Python 3.11+**，依赖按需安装。复原前会检查输入配对和完整范围，建立独立工作目录并保留原文件。优先本地处理，技能不要求上传琴谱或录音。
+运行脚本需要 **Python 3.11+**，依赖按需安装。当前验证环境为 Windows + Python 3.12；macOS / Linux 尚未完成全流程验证。复原前会检查输入配对和完整范围，建立独立工作目录并保留原文件。
 
 ### 3. 可选：先跑通两音示例
 
@@ -122,6 +122,14 @@ python scripts/render_preview.py ../midi-demo/pedal-demo.mid --sf2 /path/to/pian
 - **试听是采样近似。** 渲染适配器不完整模拟琴弦共鸣、重新踩踏或半踏板；播放音色取决于所用 SF2。
 - **不附带模型、权重或 SF2，也不会自动下载。** 仅在工作需要时选择合适工具，并核对其许可与环境兼容性。
 
+## 隐私与问题反馈
+
+附带脚本在本地处理文件，不含网络上传逻辑。这不代表整个代理环境完全离线；代理或外部模型的数据处理方式取决于实际运行环境及所用服务。
+
+输入清单 `input_manifest.json`、校验报告 `*.validation.json` 和渲染报告 `*.render.json` 可能包含本机绝对路径、私人文件名及文件哈希。公开分享前，请删除或替换其中的个人信息。工作材料和输出建议放在仓库外；`.gitignore` 也会默认排除常见工作目录、媒体、音源、权重和凭据文件。
+
+可通过 [GitHub Issues](https://github.com/gou-xing-xing/score-audio-to-midi/issues) 反馈问题。请提供系统与 Python 版本、相关依赖版本、最小复现步骤和错误信息；涉及试听时补充音源名称、bank / preset 与踏板模式。只附有权公开且已脱敏的最小示例，不要提交私人琴谱、录音、密钥或音源文件。
+
 ## 进一步阅读
 
 | 文档 | 内容 |
@@ -131,4 +139,8 @@ python scripts/render_preview.py ../midi-demo/pedal-demo.mid --sf2 /path/to/pian
 | [项目格式与脚本](references/project-format.md) | JSON、命令参数、覆盖规则与修订基线 |
 | [质量检查与试听](references/quality-and-rendering.md) | CC64、播放链路、结尾和返修检查 |
 
-上述详细参考文档目前以中文提供。仓库尚未添加许可证；第三方工具、模型与音源适用各自的许可。
+上述详细参考文档目前以中文提供。
+
+## 许可
+
+本仓库的代码、技能说明、自有示例与图示按 [MIT 许可证](LICENSE) 发布，允许使用、修改、分发和商用，并须保留版权及许可声明。输入琴谱、录音以及第三方工具、模型、权重和音源适用各自的许可，不因本仓库采用 MIT 而获得额外授权。
